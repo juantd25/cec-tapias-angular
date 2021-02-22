@@ -1,5 +1,18 @@
 # Confecciones el condor
 
+Ejercicio E. PARTE DE PROGRAMACIÓN
+Realizar el siguiente requerimiento en el lenguaje de su preferencia. Se debe enviar código fuente y base de datos al correo ..., si no se dejan adjuntar los archivos usar WeTransfer.
+La empresa Confecciones El Condor, requiere capturar la información de los empleados que van a usar el servicio de restaurante. Con los siguientes campos:
+-Tipo Documento
+-Número Documento
+-Nombres
+-Apellidos
+-Fecha de nacimiento
+-Área a la que pertenece
+Se necesita capturar la información y tener consulta de los empleados. Adicionalmente poder modificar o eliminar registros.
+
+# Project
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
 
 ## Install dependencies
