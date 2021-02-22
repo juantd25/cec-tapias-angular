@@ -15,13 +15,17 @@ Se necesita capturar la información y tener consulta de los empleados. Adiciona
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
 
+## Install Nodejs for npm packages
+
+Navigate to `https://nodejs.org/es/` download and install
+
 ## Install dependencies
 
-Run `npm install` for install Nodejs dependencies
+Run `npm install` for install Nodejs dependencies and Run `npm install -g @angular/cli` for install Angular cli
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
