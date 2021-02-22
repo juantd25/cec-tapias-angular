@@ -1,0 +1,49 @@
+<div id="open-modal" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Cerrar</a>
+    <h1>{{employee ? 'Editar empleado' : 'Registrar empleado'}}</h1>
+    <div>
+      <form #employeeForm="ngForm" novalidate (ngSubmit)="onSubmit(employeeForm)">
+        <div class="form-group">
+          <label for="nombre">Nombres</label>
+          <input type="text" class="form-control" name="nombre" [ngModel]="employee?.nombre" ngModel required />
+        </div>
+
+        <div class="form-group">
+          <label for="apellido">Apellidos</label>
+          <input type="text" class="form-control" name="apellido" [ngModel]="employee?.apellido" ngModel required />
+        </div>
+
+        <div class="form-group">
+          <label for="tipoDocumento">Tipo de Documento</label>
+          <select class="form-control" name="tipoDocumento" [ngModel]="employee?.tipoDocumento" ngModel required>
+            <option *ngFor="let doc of doctype" [value]="doc.key">{{ doc.label }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="numeroDocumento">Número doc</label>
+          <input type="text" class="form-control" name="numeroDocumento" [ngModel]="employee?.numeroDocumento" ngModel
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="fechaNacimiento">Fecha Nacimiento</label>
+          <input type="date" class="form-control" name="fechaNacimiento" [ngModel]="employee?.fechaNacimiento" ngModel
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="area">Area</label>
+          <select class="form-control" name="area" [ngModel]="employee?.area" ngModel required>
+            <option *ngFor="let area of areas" [value]="area.key">{{ area.label }}</option>
+          </select>
+        </div>
+
+        <div class="submit-container">
+          <button style="cursor: pointer;" type="submit">{{employee ? 'Editar' : 'Crear'}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<section>
+  <h1>Empleados</h1>
+  <div class="container">
+    <div class="interior">
+      <button style="cursor: pointer;" class="btn" (click)="newEmployee()">Registrar</button>
+    </div>
+  </div>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Tipo de documento</th>
+          <th>Número de documento</th>
+          <th>Fecha nacimiento</th>
+          <th>Área</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content-employee">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr *ngFor="let employee of (employees$ | async)">
+          <th>{{employee.nombre}}</th>
+          <th>{{employee.apellido}}</th>
+          <th>{{employee.tipoDocumento}}</th>
+          <th>{{employee.numeroDocumento}}</th>
+          <th>{{employee.fechaNacimiento}}</th>
+          <th>{{employee.area}}</th>
+          <th>
+            <button style="cursor: pointer;" class="submit" (click)="editEmployee(employee)">Editar</button>
+            <button style="cursor: pointer;" class="submit" (click)="deleteEmployee(employee)">Borrar</button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<app-employee-dialog *ngIf="showModal" [employee]='selectedEmployee' (closeDialog)="closeDialog"></app-employee-dialog>
